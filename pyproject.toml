@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "task-tracker"
+version = "0.1.0"
+description = "Small cli app to manage tasks"
+authors = ["Alfurquan Zahedi <alzahedi@microsoft.com>"]
+readme = "README.md"
+packages = [{include = "task_tracker"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.12.3"}
+tinydb = "^4.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+task = "task_tracker.cli:app"
